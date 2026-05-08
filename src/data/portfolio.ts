@@ -68,7 +68,7 @@ export interface ExperienceEntry {
 export const experience: ExperienceEntry[] = [
   {
     role: "Software Development & Data Engineering Intern",
-    company: "Farmsite",
+    company: "Pharmsight Research And Analytics",
     location: "Remote",
     period: "2025 — Present",
     current: true,
@@ -260,18 +260,11 @@ export interface EducationEntry {
 
 export const education: EducationEntry[] = [
   {
-    degree: "B.Tech in Computer Science & Engineering",
-    institution: "Amity University",
-    location: "Noida, India",
-    period: "2022 — 2026 (Expected)",
-    details: "CGPA: 7.5",
-  },
-  {
-    degree: "Senior Secondary (XII)",
-    institution: "St. Xavier's High School",
-    location: "Gurgaon, India",
-    period: "2022",
-    details: "Score: 88%",
+    degree: "Computer Science Graduate",
+    institution: "India", // Using location as the subtitle for visual balance
+    location: "",
+    period: "2022 — 2026",
+    details: "",
   },
 ];
 

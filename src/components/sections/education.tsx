@@ -11,29 +11,33 @@ export function Education() {
     >
       <SectionHeading label="Background" title="Education" />
 
-      <div className="grid gap-4 sm:grid-cols-2">
-        {education.map((edu) => (
+      <div className="flex justify-center">
+        {education.map((edu, i) => (
           <div
-            key={edu.institution}
-            className="group rounded-xl border border-border/50 bg-card/50 p-6 backdrop-blur-sm transition-all hover:border-primary/20 hover:bg-card/80"
+            key={i}
+            className="group w-full max-w-md rounded-2xl border border-border/50 bg-card/40 p-8 backdrop-blur-md transition-all hover:border-primary/20 hover:bg-card/60"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex h-11 w-11 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 transition-colors group-hover:bg-primary/15">
-                <GraduationCap className="h-5 w-5 text-primary" />
+            <div className="flex flex-col items-center text-center gap-5">
+              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/15">
+                <GraduationCap className="h-7 w-7 text-primary" />
               </div>
-              <div className="flex-1">
-                <h3 className="font-heading text-base font-semibold">
+              <div className="space-y-2">
+                <h3 className="font-heading text-xl font-bold tracking-tight text-foreground">
                   {edu.degree}
                 </h3>
-                <p className="mt-1 text-sm text-primary">{edu.institution}</p>
-                <p className="mt-0.5 text-sm text-muted-foreground">
-                  {edu.location}
-                </p>
-                <div className="mt-3 flex items-center justify-between text-sm text-muted-foreground">
+                {edu.institution && (
+                  <p className="text-sm font-medium tracking-widest text-primary uppercase">
+                    {edu.institution}
+                  </p>
+                )}
+                <div className="mt-4 flex items-center justify-center gap-3 text-sm text-muted-foreground/80">
                   <span>{edu.period}</span>
-                  <span className="font-medium text-foreground/80">
-                    {edu.details}
-                  </span>
+                  {edu.location && (
+                    <>
+                      <span className="h-1 w-1 rounded-full bg-border" />
+                      <span>{edu.location}</span>
+                    </>
+                  )}
                 </div>
               </div>
             </div>
