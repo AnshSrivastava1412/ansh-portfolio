@@ -178,26 +178,12 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: "Sudoku Solver",
-    description:
-      "Backtracking-based solver with a clean visual interface for generating, solving, and validating Sudoku puzzles.",
-    tech: ["Python", "Algorithms", "GUI"],
-    github: "#",
-    featured: true,
-  },
-  {
     title: "Cash Flow Optimizer",
     description:
       "Financial tool that minimizes the number of transactions needed to settle debts among a group of people.",
     tech: ["Python", "Algorithms", "Finance"],
     github: "#",
-  },
-  {
-    title: "Snake Game",
-    description:
-      "Classic snake game implementation with smooth controls, score tracking, and progressive difficulty scaling.",
-    tech: ["Python", "Game Dev"],
-    github: "#",
+    featured: true,
   },
   {
     title: "Portfolio Websites",
